@@ -3,6 +3,15 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from mainWindow import *
 import requests
 from ui.text_UI import text_UI
+import uuid
+
+def get_mac_address():
+
+    node = uuid.getnode()
+
+    mac = uuid.UUID(int = node).hex[-12:]
+    print(mac)
+get_mac_address()
 def urlPing():
     url='https://www.baidu.com'
     response = requests.request("GET", url)

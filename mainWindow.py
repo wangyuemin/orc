@@ -185,6 +185,7 @@ class ShotDialog(QDialog, Ui_Dialog):
         shot_img= self.get_shot_img()
         shot_img.save('upload.png')
         #resultText=baidu.get_text('./upload.png')
+        
         dialogText = text_UI('123')
         try:
             dialogText.exec_()
